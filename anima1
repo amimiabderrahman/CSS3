@@ -1,0 +1,53 @@
+La propriété animation est une propriété raccourcie pour les propriétés suivantes :
+animation-name
+animation-duration,
+animation-timing-function,
+animation-delay,
+animation-iteration-count,
+animation-direction,
+animation-fill-mode,
+animation-play-state.
+Examinons plus en détail toutes ces propriétés !
+
+Animation-name
+Cette propriété définit une liste d'animations qui doivent être appliquées à l'élément ciblé. 
+Exemple : #boite{animation-name : grossir, deplacer ; } 
+Deux animations vont s'appliquer successivement à l'élément boite.
+
+Animation-duration
+Cette propriété définit la durée d'une animation pour parcourir un cycle. 
+La durée du cycle peut être exprimée en secondes (s) ou en millisecondes (ms).
+
+animation-timing-function
+Les valeurs de cette propriété sont (identiques à celles de la propriété transition-timing-function) :
+ease : vitesse rapide au début et ralenti à la fin
+linear: vitesse constante c'est à dire que la vitesse est constante
+ease-in : lent au début et de plus en plus accéléré vers la fin
+ease-out : rapide sur le début et de plus en plus décéléré vers la fin
+ease-in-out : le départ et la fin sont lents
+steps(n,start/end) : animation saccadée (sauts successifs)
+La valeur retenue s'applique à chaque étape de l'animation. 
+Donc cette propriété a un intérêt surtout pour les modèles d'animation ne comportant que deux étapes étiquetées avec les mots from et to (ou 0% et 100%).
+
+animation-delay
+Cette propriété définit la durée d'attente avant de démarrer une animation. 
+La valeur par défaut est 0s. 
+La valeur est exprimée en secondes ou millisecondes et peut négative ! 
+Si la valeur est négative l'animation débutera immédiatement ! Par exemple, si on utilise la valeur -2s comme durée, l'animation commencera immédiatement avec l'état qu'elle aurait « normalement » eue au bout de 2 secondes.
+
+animation-iteration-count
+Cette propriété indique le nombre de cycles d'une animation. 
+La valeur par défaut est 1. 
+La valeur peut être infinite ou un nombre même décimal. Par exemple : 2.5 pour que le troisième cycle ne soit effectué qu'à moitié.
+
+animation-direction
+Cette propriété indique dans quel ordre les étapes de chaque cycle doivent être exécutées. 
+La valeur par défaut est normal. La valeur alternate peut-être très très pratique ... Voir l'exemple plus loin dans la même page.
+
+animation-fill-mode
+Cette propriété indique si il faut "geler" l'état de l'élément à la fin de l'animation. Un petit exemple vaut mieux qu'un long discours ! Voir exemple plus loin dans la page.
+
+animation-play-state
+La propriété animation-play-state détermine si une animation est en cours d'exécution ou si elle est en pause. 
+La valeur par défaut est running (animation en cours) ; l'autre valeur est paused 
+Grâce à cette propriété on peut redémarrer/suspendre une animation.
