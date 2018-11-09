@@ -1,0 +1,26 @@
+<style>
+@keyframes tour_ok
+{ 
+		0%{left : 0% ; top :0px;}
+		40% {left: 90%; top :0px; }
+		50% {top :200px;left :90%;}
+		90% {left :0%; top : 200px;}
+		100% {top :0px; left :0%;} 
+}
+@keyframes tour_bug
+{ 
+		0%{left : 0% ; top :0px;}
+		25% {left: 90%; top :0px; }
+		50% {top :200px;left :90%;}
+		75% {left :0%;top : 200px;}
+		100% {top :0px; left :0%;}
+}
+.boule{ width: 16px;   height:16px ;   border-radius: 8px;	position : relative ;  	box-shadow : 5px 5px 5px grey;}
+#rouge{ animation : tour_ok 10s 0s infinite linear; background : red; }
+#verte{ animation : tour_bug 10s 2s infinite linear; background : green; }
+...
+<body>
+...
+	<div id="rouge" class ="boule"></div>
+	<div id="verte" class ="boule"></div>
+...
